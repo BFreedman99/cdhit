@@ -2243,7 +2243,7 @@ void SequenceDB::SortDivide( Options & options, bool sort )
 		if( seq->identifier ) total_desc += strlen( seq->identifier );
 	}
 	options.max_entries = max_len * MAX_TABLE_SEQ;
-	if (max_len >= 65536 and sizeof(INTs) <=2) 
+	if (max_len >= 10000000 and sizeof(INTs) <=2) 
 		bomb_warning("Some seqs longer than 65536, you may define LONG_SEQ");
 
 	if (max_len > MAX_SEQ ) 
